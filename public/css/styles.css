@@ -1,0 +1,415 @@
+/*--------------General------------------*/
+
+section{
+    margin: 4rem;
+}
+
+/*--------------Hero Section------------------*/
+
+.hero-section{
+    background: url("/images/enlargeUntitled.jpg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60rem;
+    margin: 0 0;
+}
+
+.hero-text{
+    width: 50%;
+    justify-content: end;
+    align-self: flex-end;
+    padding: 5rem;
+    color: white;
+}
+
+.hero-text h1{
+    font-size: 10rem !important;
+}
+
+.hero-logo{
+    width: 50%;
+}
+/*--------------About Section------------------*/
+
+.about-section{
+    background-color: #12151d;
+    margin: 0rem 0rem;
+    padding: 7rem;
+}
+
+.about-section h2 {
+    color: #ecad34;
+}
+
+/*--------------Stats Section------------------*/
+
+.stats-section{
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/yellowbackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0rem 0rem;
+    padding-top: 3rem;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.counter {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 32rem;
+    height: 27rem;
+    margin: 1rem;
+    padding: 3rem;
+}
+
+/*--------------CTA Section------------------*/
+
+.cta-section{
+    display: flex;
+    background-image: url("/images/starbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0rem 0rem;
+}
+
+/*--CTA Left Section--*/
+
+.cta-left{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1350px) {
+    .cta-left {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+  }
+
+/*
+.cta-sm-1{
+    /*background: url("/images/sm-1.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+.cta-sm-2{
+    /*background: url("/images/sm-2.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+.cta-sm-3{
+    /*background: url("/images/sm-3.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+.cta-sm-4{
+    /*background: url("/images/sm-4.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}*/
+
+/*--CTA Middle Section--*/
+
+.cta-middle{
+    display: flex;
+    flex-direction: column;
+    width: 52rem;
+    margin: 1rem;
+}
+
+.cta-l-image{
+    display: flex;
+    align-items: flex-end;
+    background: url("/images/randallspicture.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 79rem;
+    width: 52rem;
+    margin: 1rem 0;
+    border: 1rem solid rgb(34, 133, 186);
+}
+
+@media screen and (max-width: 600px) {
+    .cta-l-image{
+      clear: both;
+      float: left;
+      display: flex;
+      align-items: center;
+      background: url("/images/randallspicture.png") !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      height: 54rem !important;
+      width: 34rem !important;
+      margin: 10px auto 5px 20px;
+    }
+  }
+
+.cta-l-link{
+    background-color: #f7db31;
+    color: black;
+    text-decoration: underline;
+    width: 52rem;
+    height: 10rem;
+    padding: .8rem;
+}
+
+@media screen and (max-width: 600px) {
+    .cta-l-link{
+      clear: both;
+      float: left;
+      display: flex;
+      background-color: #f7db31;
+      color: black;
+      text-decoration: underline;
+      width: 52rem;
+      height: 8rem;
+      margin-bottom: -44rem;
+      padding: .8rem;
+    }
+  }
+
+.cta-l-link a{
+    color: black;
+    text-decoration: underline;
+}
+/*
+.cta-sm-5{
+    /*background: url("/images/sm-5.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+.cta-sm-6{
+    /*background: url("/images/sm-6.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+*/
+.cta-middle-bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 25rem;
+    width: 25rem;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 1350px) {
+    .cta-middle-bottom {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+  }
+  
+
+/*--CTA Right Section--*/
+
+.cta-right{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 53rem;
+    margin: 1rem;
+    margin-bottom: 7rem;
+}
+/*--------------Portolio Section------------------*/
+
+.portfolio-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.sites{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sites div.accoladi{
+    background: url("/images/accoladi.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.nsjrma{
+    background-image: url("/images/nsjrma.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.director-letters{
+    background-image: url("/images/director-letters.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.my-music-future{
+    background-image: url("/images/my-music-future.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.between-bands{
+    background-image: url("/images/between-bands.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.honor-ensemble-conductors{
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+    background-image: url("/images/honor-ensemble-conductors.png");
+}
+
+.sites div.nsma{
+    background-image: url("/images/nsma.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+.sites div.music-city-bowl-band{
+    background-image: url("/images/music-city-bowl-band.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+.sites div.hollywood-sightreading{
+    background-image: url("/images/hollywood-sightreading.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+.sites div.between-choirs{
+    background-image: url("/images/between-choirs.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.american-band-dad{
+    background-image: url("/images/american-band-dad.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.sites div.profet {
+    background-image: url("/images/profet.png");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 51rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+/*--------------Intern Section------------------*/
+
+.intern-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #12151d;
+    color: white;
+    margin: 6rem 0rem;
+    padding: 4rem 0;
+}
+
+.intern-title{ 
+    margin: 3.5rem;
+    justify-content: end;
+    align-self: flex-end;
+}
+
+.intern-title h1 {
+    font-weight: bolder;
+    font-size: 4.8rem;
+    line-height: 6rem;
+}
+
+.intern{
+    border: 1.5rem solid white;
+    width: 18rem;
+    height: 18rem;
+    margin: 3rem;
+}

@@ -1,0 +1,145 @@
+<%- include('partials/header') -%>
+<script>
+    function animateCounter(targetCount, duration, elementId) {
+      const countElement = document.getElementById(elementId);
+      const startCount = parseInt(countElement.textContent);
+      const step = Math.ceil(targetCount / (duration * 300)); // Calculate increment per millisecond
+
+      let currentCount = startCount;
+      const interval = setInterval(function () {
+        currentCount += step;
+        countElement.textContent = currentCount.toLocaleString(); // Format with commas
+
+        if (currentCount >= targetCount) {
+          clearInterval(interval);
+          countElement.textContent = targetCount.toLocaleString(); // Format the final count
+        }
+      }, 1); // Update every millisecond
+    }
+
+    // Example usage for each counter:
+    window.addEventListener('load', function () {
+      animateCounter(3240000, 5, 'count1'); // Count up to 3,240,000 in 5 seconds on page load
+      animateCounter(5480000, 5, 'count2'); // Count up to 5,480,000 in 5 seconds on page load
+      animateCounter(215714, 5, 'count3');  // Count up to 215,714 in 5 seconds on page load
+      animateCounter(37650, 5, 'count4');   // Count up to 37,650 in 5 seconds on page load
+    });
+  </script>
+
+<main>
+    <section class="hero-section">
+            <div class="hero-text">
+                <h1>Dream Big With Us!</h1>
+            </div>
+            <div class="hero-logo">
+                <img>
+            </div>
+    </section>
+    <section class="about-section">
+        <h2>Scholarship Auditions brings multiple resources and opportunities to middle school, high school, and collegiate performing arts students, along with the institutions and associations that support these students.</h2>
+    </section>
+    <br>
+    <section class="cta-section">
+        <div class="cta-left">
+
+        </div>
+        <div class="cta-middle">
+            <div class="cta-l-image">
+                <div class="cta-l-link">
+                    <h4>Founder, Dr. Randall Bayne</h4>
+                    <h4><a href="/founder">His Story</a></h4>
+                </div>
+            </div>
+            <div class="cta-middle-bottom">
+
+            </div>
+        </div>
+        <div class="cta-right">
+            <h2>Why Choose Us</h2>
+            <br>
+            <h3> Professional Team</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+            <br>
+            <h3> Unusual Ideas</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+            <br>
+            <h3> Made With Respect</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+        </div>
+    </section>
+    <section class="stats-section">
+        <h2 style="text-align:center">Reaching</h2>
+        <br>
+        <div class="stats">
+            <div class="stat">
+                <img>
+                <div class="counter">
+                    <span id="count1">0</span>
+                </div>
+                <h4>Middle & High School Performing Arts Students</h4>
+            </div>
+            <div class="stat">
+                <img>
+                <div class="counter">
+                    <span id="count2">0</span>
+                </div>
+                <h4>Middle & High School Performing Arts Students' Parents</h4>
+            </div>
+            <div class="stat">
+                <img>
+                <div class="counter">
+                    <span id="count3">0</span>
+                </div>
+                <h4>Middle & High School Educators</h4>
+            </div>
+            <div class="stat">
+                <img>
+                <div class="counter">
+                    <span id="count4">0</span>
+                </div>
+                <h4>College, University, Conservatory Performing Arts Educators</h4>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="portfolio-section">
+        <h2 style="margin: 0 1rem">Our Portfolio</h2>
+        <h3 style="margin: 1rem 1rem">Present Offerings</h3>
+        <br>
+        <div class="sites">
+            <a href="https://www.accoladi.com/"><div class="accoladi"></div></a>
+            <a href="https://www.nationalscholasticjuniormusiciansawards.com/home"><div class="nsjrma"></div></a>
+            <a href="https://www.directorletters.com/home"><div class="director-letters"></div></a>
+            <a href="https://www.mymusicfuture.com/"><div class="my-music-future"></div></a>
+            <a href="https://betweenbands.org/"><div class="between-bands"></div></a>
+            <a href="http://honorensembleconductors.com/"><div class="honor-ensemble-conductors"></div></a>
+            <a href="https://www.nationalscholasticmusiciansawards.com/home"><div class="nsma"></div></a>
+            <a href="https://www.musiccitybowlband.com/"><div class="music-city-bowl-band"></div></a>
+        </div>
+    </section>
+    <section class="portfolio-section">
+        <h2 style="margin: 1rem 1rem">Future Offerings</h2>
+        <br>
+        <div class="sites">
+            <a><div class="hollywood-sightreading"></div></a>
+            <a><div class="between-choirs"></div></a>
+            <a><div class="american-band-dad"></div></a>
+            <a><div class="profet"></div></a>
+        </div>
+    </section>
+    <section class="intern-section">
+        <div class="intern-title">
+            <h1>Collegiate <br>Internship <br>Program</h1>
+        </div>
+        <div class="intern intern1"></div>
+        <div class="intern intern2"></div>
+        <div class="intern intern3"></div>
+        <div class="intern intern4"></div>
+        <div class="intern intern5"></div>
+        <div class="intern intern6"></div>
+        <div class="intern intern7"></div>
+        <div class="intern intern8"></div>
+    </section>
+</main>
+
+<%- include('partials/footer') -%>
