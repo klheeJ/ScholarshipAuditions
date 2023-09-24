@@ -84,10 +84,6 @@ app.get("/contact", function(req,res){
     res.render('contact')
 });
 
-app.get('/aboutus', function(req,res){
-    res.render('about')
-});
-
 app.get('/founder', function(req,res){
   res.render('founder')
 });

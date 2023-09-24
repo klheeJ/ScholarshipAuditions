@@ -4,6 +4,92 @@ section{
     margin: 4rem;
 }
 
+/*     NAV      */
+header {
+    margin: 4rem 0;
+}
+.navTitle {
+    text-align: center;
+    font-family: garamond serif;
+    font-size: 40px;
+    margin-bottom: 3rem;
+    color: #ecad34;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav a{
+    color: #12151d;
+    font-weight: bold;
+}
+
+/*         FOOTER         */
+
+footer{
+    background-color: #ecad34;
+    color: #12151d;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.links-wrapper{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 13px;
+}
+
+.links-wrapper h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.link-list li{
+    list-style: none;
+}
+
+.link-list a{
+    color: #12151d;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-links li{
+    list-style: none;
+    font-size: 20px;
+    margin: 1rem;
+    color: #12151d;
+}
+
+.fineprint{
+    text-align: center;
+}
+
 /*--------------Hero Section------------------*/
 
 .hero-section{
@@ -412,4 +498,64 @@ section{
     width: 18rem;
     height: 18rem;
     margin: 3rem;
+}
+
+/*--------------FOUNDER PAGE------------------*/
+.founder-bio-section{
+    border: 1px solid #ecad34;
+    padding: 3rem;
+}
+.founder-title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+    margin-bottom: 4rem;
+}
+
+.founder-ltitle{
+    width: 48%;
+}
+
+.founder-ltitle h1{
+    font-size: 9rem;
+    text-shadow: -3px 2px 0px rgba(236, 173, 52, 0.89);
+}
+
+.founder-rtitle{
+    width: 48%;
+    background-color: #12151d;
+    text-align: center;
+    color: white;
+    border: 1rem solid #ecad34;
+}
+
+.founder-rtitle h3{
+    font-size: 6rem;
+}
+
+p {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.quote{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #ecad34;
+}
+
+.founder-image-section{
+    border: 1px solid rgb(34, 133, 186);
+    padding: 3rem;
+}
+
+img{
+    width: 100%;
+  height: auto;
+}
+
+.founder-image{
+    border: 1.5rem solid #ecad34;
 }
