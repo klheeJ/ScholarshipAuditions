@@ -1,5 +1,9 @@
 /*--------------General------------------*/
 
+* {
+    font-family: 'Poppins';
+}
+
 section{
     margin: 4rem;
 }
@@ -106,7 +110,11 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     height: 60rem;
-    margin: 0 0;
+    /* position: relative; */
+    /* left: -50px; */
+    top: 20%;
+    width: 100vw;
+    margin-left: 0;
 }
 
 .hero-text{
@@ -473,17 +481,21 @@ footer{
     margin: 1rem;
 }
 
-/*--------------Intern Section------------------*/
+.sites a:hover {
+    opacity: 70%;
+}
 
-.intern-section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #12151d;
+/*--------------Intern Section------------------*/
+.grad-cap {
+    width: 10rem;
+}
+
+.internship-pictures{ 
+    background-color: hsl(230, 36%, 14%);
     color: white;
-    margin: 6rem 0rem;
-    padding: 4rem 0;
+    margin: 6rem -5rem !important;
+    padding: 3rem 0rem;
+    max-width: 105%;
 }
 
 .intern-title{ 
@@ -503,6 +515,24 @@ footer{
     width: 18rem;
     height: 18rem;
     margin: 3rem;
+}
+
+.intern1 > div,
+.intern2 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.internship-list {
+    background-image: url(../images/fireworks\ and\ school.png);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    color: white;
+    margin: 6rem 0rem;
+    padding: 3rem 0rem;
+    width: 100%;
 }
 
 /*--------------FOUNDER PAGE------------------*/
