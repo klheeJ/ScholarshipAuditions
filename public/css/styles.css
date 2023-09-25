@@ -11,7 +11,7 @@ header {
 .navTitle {
     text-align: center;
     font-family: garamond serif;
-    font-size: 40px;
+    font-size: 4rem;
     margin-bottom: 3rem;
     color: #ecad34;
     font-weight: bold;
@@ -88,6 +88,11 @@ footer{
 
 .fineprint{
     text-align: center;
+    margin-top: 2.4rem;
+}
+
+.fineprint p{
+ font-size: smaller;
 }
 
 /*--------------Hero Section------------------*/
