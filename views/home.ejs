@@ -1,184 +1,376 @@
 <%- include('partials/header') -%>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll(".counter span")
-    const container = document.querySelector(".stats-section")
-
-    let activated = false;
-
-    window.addEventListener("scroll", () => {
-        if(
-            pageYOffset > container.offsetTop - container.offsetHeight - 200
-            && activated == false
-        ) {
-            counters.forEach(counter=>{
-                counter.innerText =0;
-
-                let count = 0;
-
-                function updateCount() {
-                    const target = parseInt(counter.dataset.count);
-
-                    if(count < target) {
-                        count+=100;
-                        counter.innerText = count;
-
-                        setTimeout(updateCount,10);
-                    } else {
-                        counter.innerText = target;
-                    }
-                }
-                updateCount();
-                activated = true;
-            });
-        }
-    })
-})
-
-    const rightArrow = document.querySelector('.right-scroll')
-    const leftArrow = document.querySelector('.left-scroll')
-    const backgroundContainer = document.querySelector('.hero-section')
-
-    const backgroundImages = [
-        '../images/scholarshipauditions.com landing page 2.jpg',
-        '../images/scholarshipauditions.com landing page 3.jpg',
-        '../images/scholarshipauditions.com landing page 4.jpg',
-    ]
-
-    let currentImageIndex = 0;
-
-    function newImage(event) {
-        if(event.target === rightArrow) {
-        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-
-        } else if (event.target === leftArrow) {
-        currentImageIndex = (currentImageIndex - 1 + backgroundImages.length) % backgroundImages.length;
-        }
-        const imageUrl =   `url(${backgroundImages[currentImageIndex]})`
-        backgroundContainer.style.backgroundImage = imageUrl
-    }
-        rightArrow.addEventListener('click', newImage);
-        leftArrow.addEventListener('click', newImage);
-</script>
 
 <main>
     <section class="hero-section">
-        <div class="slider-arrows">
-            <i class="left-scroll fa-solid fa-chevron-left text-white ml-5"></i>
-            <i class="right-scroll fa-solid fa-chevron-right text-white mr-5"></i>
-        </div>
         <div class="hero-text">
             <h1>Dream Big With Us!</h1>
         </div>
-        <div class="hero-logo">
-            <img>
+        <div class="hero-carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="/images/enlargeUntitled.jpg" alt="image1">
+                </li>
+                <li class="slide">
+                    <img src="/images/hero2.jpg" alt="image2">
+                </li>
+                <li class="slide">
+                    <img src="/images/hero3.jpg" alt="image3">
+                </li>
+                <li class="slide">
+                    <img src="/images/hero4.jpg" alt="image4">
+                </li>
+            </ul>
         </div>
-    </section>
+    </section>    
     <section class="about-section">
         <h2>Scholarship Auditions brings multiple resources and opportunities to middle school, high school, and collegiate performing arts students, along with the institutions and associations that support these students.</h2>
     </section>
     <br>
     <section class="cta-section">
-        <div class="cta-left">
-
-        </div>
-        <div class="cta-middle">
-            <div class="cta-l-image">
-                <div class="cta-l-link">
-                    <h4>Founder, Dr. Randall Bayne</h4>
-                    <h4><a href="/founder">His Story</a></h4>
-                </div>
-            </div>
-            <div class="cta-middle-bottom">
-
-            </div>
+        <div class="cta-left" style="border: none !important;">
+            <a href="/founder"><img src="/images/randallfounder.png"></a>
         </div>
         <div class="cta-right">
-            <h2>Why Choose Us</h2>
+            <h1>Scholarship Auditions: Visionary Pioneers</h1>
             <br>
-            <h3> Professional Team</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+            <p>Our online platform empowers scholastic performing arts students, guiding them through the intricate journey of application, audition, and scholarship attainment while seamlessly connecting them with collegiate music recruiters.</p>
             <br>
-            <h3> Unusual Ideas</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+            <div class="cta-smallbox">
+                <div class="cta-smallbox-text">
+                    <h2>Valued</h2>
+                    <p>by Students and Parents</p>
+                </div>
+                <div class="cta-smallbox-img">
+                    <img src="/images/icon11.png">
+                </div>
+            </div>
+           
+            <div class="cta-smallbox" style="justify-content: space-around;">
+                <div class="cta-smallbox-img middle">
+                    <img src="/images/icon22.png">
+                </div>
+                <div class="cta-smallbox-text">
+                    <h2>Trusted</h2>
+                    <p>by Scholastic Music Educators</p>
+                </div>
+            </div>
+          
+            <div class="cta-smallbox">
+                <div class="cta-smallbox-text">
+                    <h2>Esteemed</h2>
+                    <p>by Collegiate School of Music Recruiters</p>
+                </div>
+                <div class="cta-smallbox-img">
+                    <img src="/images/icon33.png">
+                </div>
+            </div>
             <br>
-            <h3> Made With Respect</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
+            <h4 style="text-align: right !important; font-size: 2.3rem;"><a style="text-align: right !important; color: black;" href="/about">See more...</a></h4>
         </div>
     </section>
     <section class="stats-section">
-        <h2 style="text-align:center">Reaching</h2>
+        <h1>Reaching</h1>
         <br>
         <div class="stats">
             <div class="stat">
-                <img>
+                <img src="/images/icon1.png" alt="Accoladi" width="100" height="100">
                 <div class="counter">
-                    <span id="count1" data-count="3240000">0</span>
+                    <span id="count1">0</span>
                 </div>
                 <h4>Middle & High School Performing Arts Students</h4>
             </div>
             <div class="stat">
-                <img>
+                <img src="/images/icon2.png" alt="Accoladi" width="100" height="100">
                 <div class="counter">
-                    <span id="count2" data-count="5480000">0</span>
+                    <span id="count2">0</span>
                 </div>
                 <h4>Middle & High School Performing Arts Students' Parents</h4>
             </div>
             <div class="stat">
-                <img>
+                <img src="/images/icon3.png" alt="Accoladi" width="100" height="100" style="width: 44% !important;
+                ">
                 <div class="counter">
-                    <span id="count3" data-count="215714">0</span>
+                    <span id="count3">0</span>
                 </div>
-                <h4>Middle & High School Educators</h4>
+                <h4>Middle & High School Music Educators</h4>
             </div>
             <div class="stat">
-                <img>
+                <img src="/images/icon4.png" alt="Accoladi" width="100" height="100" style="width: 70% !important;
+                ">
                 <div class="counter">
-                    <span id="count4" data-count="37650">0</span>
+                    <span id="count4">0</span>
                 </div>
                 <h4>College, University, Conservatory Performing Arts Educators</h4>
             </div>
         </div>
     </section>
     <br>
-    <section class="portfolio-section">
-        <h2 style="margin: 0 1rem">Our Portfolio</h2>
-        <h3 style="margin: 1rem 1rem">Present Offerings</h3>
-        <br>
-        <div class="sites">
-            <a href="https://www.accoladi.com/" target="_blank"><div class="accoladi"></div></a>
-            <a href="https://www.nationalscholasticjuniormusiciansawards.com/home" target="_blank"><div class="nsjrma"></div></a>
-            <a href="https://www.directorletters.com/home" target="_blank"><div class="director-letters"></div></a>
-            <a href="https://www.mymusicfuture.com/" target="_blank"><div class="my-music-future"></div></a>
-            <a href="https://betweenbands.org/" target="_blank"><div class="between-bands"></div></a>
-            <a href="http://honorensembleconductors.com/" target="_blank"><div class="honor-ensemble-conductors"></div></a>
-            <a href="https://www.nationalscholasticmusiciansawards.com/home" target="_blank"><div class="nsma"></div></a>
-            <a href="https://www.musiccitybowlband.com/" target="_blank"><div class="music-city-bowl-band"></div></a>
+
+    <section>
+        <h1 style="font-size: 5rem; font-weight: 800; color:black;">Our Portfolio</h1>
+        <h2 style="color:black;">Our Offerings</h2>
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/accoladi.png" alt="Accoladi">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/accoladi.png"></a>
+                    <p style="text-align: center;">An online matching platform connecting aspiring music majors and collegiate performers with school of music recruiters, serving as a comprehensive resource for the entire application, audition, scholarship and acceptance process.</p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/nsjrma.png" alt="NSMA Jr">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/nsjrma.png"></a>
+                    <p style="text-align: center;">An online awards system for middle school music students, mirroring honor ensemble audition requirements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/director-letters.png" alt="Director Letters">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/director-letters.png"></a>
+                    <p style="text-align: center;">A compilation of tailored topic-specific letters addressing the distinct communication requirements of music educators.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/my-music-future.png" alt="My Music Future">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/my-music-future.png"></a>
+                    <p style="text-align: center;">An aptitude assessment to assist students in determining their suitability for a music career and identifying their ideal music-related path.</p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/between-bands.png" alt="Between Bands">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/between-bands.png"></a>
+                    <p style="text-align: center;">An interactive edutainment website designed for marching band fans.</p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/honor-ensemble-conductors.png" alt="Honor Ensemble Conductors">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/honor-ensemble-conductors.png"></a>
+                    <p style="text-align: center;">The central hub linking elite conductors with global honor ensemble organizers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/nsma.png" alt="NSMA">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/nsma.png"></a>
+                    <p style="text-align: center;">A comprehensive online awards system for high school music students, closely mirroring collegiate audition standards.
+                    </p>
+                </div>
+            </div>
+
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/music-city-bowl-band.png" alt="Music City Bowl Band">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/music-city-bowl-band.png"></a>
+                    <p style="text-align: center;">The online community for high school and college marching band members who will form the annual USA Festival Marching Band performing at the Music City Bowl in Nashville, Tennessee.</p>
+                </div>
+            </div>
         </div>
+        <div class="clearfix"></div>
     </section>
-    <section class="portfolio-section">
-        <h2 style="margin: 1rem 1rem">Future Offerings</h2>
-        <br>
-        <div class="sites">
-            <a><div class="hollywood-sightreading"></div></a>
-            <a><div class="between-choirs"></div></a>
-            <a><div class="american-band-dad"></div></a>
-            <a><div class="profet"></div></a>
+
+    <section>
+        <h2 style="color:black;">Future Offerings</h2>
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/hollywood-sightreading.png" alt="Hollywood Sightreading">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/hollywood-sightreading.png"></a>
+                    <p style="text-align: center;">A methodical platform empowering academic musicians to excel in precision and artistry in sightreading, while performing alongside renowned Hollywood movie session soundtrack orchestras.
+                    </p>
+                </div>
+            </div>
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/between-choirs.png" alt="Between Choirs">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/between-choirs.png"></a>
+                    <p style="text-align: center;">An engaging edutainment website tailored for show choir enthusiasts.
+                    </p>
+                </div>
+            </div>
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/american-band-dad.png" alt="American Band Dad" width="600" height="400">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/american-band-dad.png"></a>
+                    <p style="text-align: center;">The central hub for whimsical edutainment podcasts featuring fictional Wendell Bud McFarland, who humorously assumes the role of National President of the American Band Dad Association.
+                    </p>
+                </div>
+            </div>
+            <div class="responsive1">
+                <div class="gallery1">
+                    <img src="/images/profet.png" alt="Profet" width="600" height="400">
+                </div>
+                <div class="overlay-content">
+                    <a target="_blank" href="/images/profet.png"></a>
+                    <p style="text-align: center;">A precise assessment tool enabling high school music students to forecast their ideal collegiate music journey, aligning with the career aspirations, performance history, and musical proficiency as aspiring music majors.</p>
+                </div>
+            </div>
         </div>
+        <div class="clearfix"></div>
     </section>
+
+
     <section class="intern-section">
         <div class="intern-title">
             <h1>Collegiate <br>Internship <br>Program</h1>
+            <h4 style="text-align: right;"><a style="text-align: end !important; color: white;" href="/internship-program">See more...</a></h4>
         </div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
-        <div class="intern"></div>
+        <div class="intern">
+            <img src="/images/joseph.png">
+            <h4>Joseph O’Connell</h4>
+            <h4>Harvard University</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/serene.png">
+            <h4>Serene Lewis</h4>
+            <h4>Fisk University</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/haley.png">
+            <h4>Haley Garrick</h4>
+            <h4>Brooklyn College</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/zachary.png">
+            <h4>Zachary Carr</h4>
+            <h4>Middle Tennessee<br> State University</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/sarah.png">
+            <h4>Sarah Abu-Shanab</h4>
+            <h4>Rutgers University</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/abbey.png">
+            <h4>Abbey Jackson</h4>
+            <h4>DePaul University</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/david.png">
+            <h4>David Nichols</h4>
+            <h4>University of Texas<br> at Austin</h4>
+        </div>
+        <div class="intern">
+            <img src="/images/jonathon.png">
+            <h4>Jonathon Fuller</h4>
+            <h4>University of Georgia</h4>
+        </div>
+    </section>
+    <section class="ri-section">
+        <div class="ri-image">
+            <img src="/images/ri.png">
+        </div>
+        <div class="ri-title">
+            <h1>Research Influencers</h1>
+            <br>
+            <p>ScholarshipAuditions.com is a leading hub for music education research. Our dedicated team reviews the latest music education theses and dissertations, administers surveys, and creates informative publications and videos. We strive to be the foremost resource for performing arts students and the educators who champion their academic pursuits in direct relationship to the collegiate application, audition, and scholarship acquisition process.</p>
+            <h4><a style="text-align: end !important;" href="/research-influencers">See more...</a></h4>
+        </div>
     </section>
 </main>
 
+<script>
+    function animateCounter(targetCount, duration, elementId) {
+      const countElement = document.getElementById(elementId);
+      const startCount = parseInt(countElement.textContent);
+      const step = Math.ceil(targetCount / (duration * 300)); // Calculate increment per millisecond
+
+      let currentCount = startCount;
+      const interval = setInterval(function () {
+        currentCount += step;
+        countElement.textContent = currentCount.toLocaleString(); // Format with commas
+
+        if (currentCount >= targetCount) {
+          clearInterval(interval);
+          countElement.textContent = targetCount.toLocaleString(); // Format the final count
+        }
+      }, 1); // Update every millisecond
+    }
+
+    // Example usage for each counter:
+    window.addEventListener('load', function () {
+      animateCounter(3240000, 5, 'count1'); // Count up to 3,240,000 in 5 seconds on page load
+      animateCounter(5480000, 5, 'count2'); // Count up to 5,480,000 in 5 seconds on page load
+      animateCounter(215714, 5, 'count3');  // Count up to 215,714 in 5 seconds on page load
+      animateCounter(37650, 5, 'count4');   // Count up to 37,650 in 5 seconds on page load
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const carousel = document.querySelector('[data-carousel]');
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides[currentIndex].removeAttribute('data-active');
+            currentIndex = (index + slides.length) % slides.length;
+            slides[currentIndex].setAttribute('data-active', '');
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        // Automatically advance the carousel every 4 seconds
+        setInterval(nextSlide, 4000);
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll("[data-carousel-button]")
+        
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const offset = button.dataset.carouselButton === "next" ? 1 : -1
+                const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
+        
+                const activeSlide = slides.querySelector("[data-active]")
+                let newIndex = [...slides.children].indexOf(activeSlide) + offset
+                if (newIndex < 0) newIndex = slides.children.length - 1
+                if (newIndex >= slides.children.length) newIndex = 0
+        
+                slides.children[newIndex].dataset.active = true
+                delete activeSlide.dataset.active
+            })
+        })
+    });
+    
+    </script>
 <%- include('partials/footer') -%>

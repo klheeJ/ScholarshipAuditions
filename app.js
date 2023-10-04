@@ -84,14 +84,21 @@ app.get("/contact", function(req,res){
     res.render('contact')
 });
 
+app.get("/about", function(req,res){
+  res.render('about')
+}); 
+
 app.get('/founder', function(req,res){
   res.render('founder')
 });
 
-app.get('/intern-program', function(req,res){
-  res.render('intern-program')
+app.get('/internship-program', function(req,res){
+  res.render('intern')
 });
 
+app.get('/research-influencers', function(req,res){
+  res.render('research-influencers')
+});
 
 
 
